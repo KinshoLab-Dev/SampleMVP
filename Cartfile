@@ -1,0 +1,3 @@
+github "Alamofire/Alamofire" ~> 5.1
+github "ishkawa/DIKIt"
+github "AliSoftware/OHHTTPStubs"

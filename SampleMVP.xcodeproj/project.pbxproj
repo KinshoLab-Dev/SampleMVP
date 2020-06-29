@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		ADB764FE24AA231800843F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB764FC24AA231800843F39 /* Main.storyboard */; };
 		ADB7650024AA231900843F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB764FF24AA231900843F39 /* Assets.xcassets */; };
 		ADB7650324AA231900843F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB7650124AA231900843F39 /* LaunchScreen.storyboard */; };
+		ADB7651024AA2D1500843F39 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB7650D24AA2D1500843F39 /* OHHTTPStubs.framework */; };
+		ADB7651224AA2D1500843F39 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB7650E24AA2D1500843F39 /* Alamofire.framework */; };
+		ADB7651424AA2D1500843F39 /* DIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB7650F24AA2D1500843F39 /* DIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,10 @@
 		ADB764FF24AA231900843F39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB7650224AA231900843F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB7650424AA231900843F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADB7650A24AA2B6900843F39 /* CarthageFrameworks.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CarthageFrameworks.xcfilelist; sourceTree = "<group>"; };
+		ADB7650D24AA2D1500843F39 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		ADB7650E24AA2D1500843F39 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		ADB7650F24AA2D1500843F39 /* DIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DIKit.framework; path = Carthage/Build/iOS/DIKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB7651024AA2D1500843F39 /* OHHTTPStubs.framework in Frameworks */,
+				ADB7651224AA2D1500843F39 /* Alamofire.framework in Frameworks */,
+				ADB7651424AA2D1500843F39 /* DIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 			children = (
 				ADB764F524AA231800843F39 /* SampleMVP */,
 				ADB764F424AA231800843F39 /* Products */,
+				ADB7650C24AA2D1500843F39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +68,22 @@
 				ADB764F624AA231800843F39 /* AppDelegate.swift */,
 				ADB764FA24AA231800843F39 /* ViewController.swift */,
 				ADB764FC24AA231800843F39 /* Main.storyboard */,
+				ADB7650A24AA2B6900843F39 /* CarthageFrameworks.xcfilelist */,
 				ADB764FF24AA231900843F39 /* Assets.xcassets */,
 				ADB7650124AA231900843F39 /* LaunchScreen.storyboard */,
 				ADB7650424AA231900843F39 /* Info.plist */,
 			);
 			path = SampleMVP;
+			sourceTree = "<group>";
+		};
+		ADB7650C24AA2D1500843F39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADB7650E24AA2D1500843F39 /* Alamofire.framework */,
+				ADB7650F24AA2D1500843F39 /* DIKit.framework */,
+				ADB7650D24AA2D1500843F39 /* OHHTTPStubs.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +96,7 @@
 				ADB764EF24AA231800843F39 /* Sources */,
 				ADB764F024AA231800843F39 /* Frameworks */,
 				ADB764F124AA231800843F39 /* Resources */,
+				ADB7650B24AA2C4E00843F39 /* Copy Frameworks via Carthage */,
 			);
 			buildRules = (
 			);
@@ -129,6 +152,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ADB7650B24AA2C4E00843F39 /* Copy Frameworks via Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/SampleMVP/CarthageFrameworks.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "Copy Frameworks via Carthage";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncarthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADB764EF24AA231800843F39 /* Sources */ = {
@@ -281,6 +326,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SampleMVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,6 +347,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SampleMVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

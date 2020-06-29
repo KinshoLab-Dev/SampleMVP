@@ -1,0 +1,13 @@
+#  CarthageFrameworks.xcfilelist
+#  SampleMVP
+#
+#  Created by 松木周 on 2020/06/29.
+#  Copyright © 2020 ShuMatsuki. All rights reserved.
+
+# This file may be set as an input or output file list for a shell script build phase.
+# List file paths below; one per line. These paths will be considered inputs or outputs for the script phase.
+# Build settings will be expanded, e.g. $(SRCROOT)/fileName
+
+$(SRCROOT)/Carthage/Build/iOS/DIKit.framework
+$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework
+$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework
