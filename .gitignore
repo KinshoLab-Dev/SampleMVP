@@ -8,8 +8,7 @@ DerivedData/
 .DS_Store
 
 # Xcode
-MarketApp.xcodeproj/
-MarketApp.xcworkspace/
+SampleMVP.xcodeproj/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
